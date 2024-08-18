@@ -1,0 +1,31 @@
+/* Botões de ação das configurações */
+.config-sections {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.config-sections button {
+    padding: 10px 20px;
+    background-color: rgb(233, 140, 156);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.config-sections button:hover {
+    background-color: rgb(219, 21, 54);
+}
+
+/* Área de exibição das configurações */
+#config-display {
+    margin-top: 30px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 300px;
+    display: none; /* Inicialmente oculto */
+}

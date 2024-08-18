@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Relatórios - Sistema de Gestão Hoteleira</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/relatorios.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navegação Lateral e Cabeçalho -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h2>Hotel Admin</h2>
+        </div>
+        <ul>
+            <li><a href="index.html" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+            <li><a href="reservas.html"><i class="fas fa-calendar-check"></i> Gestão de Reservas</a></li>
+            <li><a href="quartos.html"><i class="fas fa-bed"></i> Gestão de Quartos</a></li>
+            <li><a href="hospedes.html"><i class="fas fa-users"></i> Gestão de Hóspedes</a></li>
+            <li><a href="faturamento.html"><i class="fas fa-file-invoice-dollar"></i> Faturamento</a></li>
+            <li><a href="#"><i class="fas fa-chart-line"></i> Relatórios</a></li>
+            <li><a href="configuracoes.html"><i class="fas fa-cog"></i> Configurações</a></li>
+        </ul>
+    </nav>
+
+    <header class="main-header">
+        <div class="user-info">
+            <i class="fas fa-user-circle"></i>
+            <span>Nome do Usuário</span>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+        <h1>Gestão de Relatórios</h1>
+        <div class="relatorios-actions">
+            <button id="relatorio-ocupacao-btn">Relatório de Ocupação</button>
+            <button id="relatorio-faturamento-btn">Relatório de Faturamento</button>
+            <button id="relatorio-hospedes-btn">Relatório de Hóspedes</button>
+        </div>
+        <div id="relatorio-display">
+            <!-- Relatórios gerados serão exibidos aqui -->
+        </div>
+    </main>
+
+    <script src="js/relatorio.js"></script>
+</body>
+</html>

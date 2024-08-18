@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Quartos - Sistema de Gestão Hoteleira</title>
+    <link rel="stylesheet" href="css/quartso.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h2>Hotel Admin</h2>
+        </div>
+        <ul>
+            <li><a href="index.html" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+            <li><a href="reservas.html"><i class="fas fa-calendar-check"></i> Gestão de Reservas</a></li>
+            <li><a href="#" class="active"><i class="fas fa-bed"></i> Gestão de Quartos</a></li>
+            <li><a href="hospedes.html"><i class="fas fa-users"></i> Gestão de Hóspedes</a></li>
+            <li><a href="faturamento.html"><i class="fas fa-file-invoice-dollar"></i> Faturamento</a></li>
+            <li><a href="relatorios.html"><i class="fas fa-chart-line"></i> Relatórios</a></li>
+            <li><a href="configuracoes.html"><i class="fas fa-cog"></i> Configurações</a></li>
+        </ul>
+    </nav>
+
+    <header class="main-header">
+        <div class="user-info">
+            <i class="fas fa-user-circle"></i>
+            <span>Nome do Usuário</span>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+        <h1>Gestão de Quartos</h1>
+        <div class="quartos-actions">
+            <button class="btnNquart" id="novo-quarto-btn">Novo Quarto</button>
+        </div>
+        <table class="quartos-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Número do Quarto</th>
+                    <th>Tipo</th>
+                    <th>Status</th>
+                    <th>Preço</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Exemplo de linha de quarto -->
+                <tr>
+                    <td>1</td>
+                    <td>101</td>
+                    <td>Individual</td>
+                    <td>Disponível</td>
+                    <td>100,00</td>
+                    <td>
+                        <button class="btn-editar">Editar</button>
+                        <button class="btn-remover">Remover</button>
+                    </td>
+                </tr>
+                <!-- Outras linhas de quartos -->
+            </tbody>
+        </table>
+    </main>
+
+    <!-- Modal para Novo Quarto (oculto por padrão) -->
+    <div id="modal-novo-quarto" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Novo Quarto</h2>
+            <form id="novo-quarto-form" method="POST" action="php/add_quarto.php">
+                <div class="form-group">
+                    <label for="numero-quarto">Número do Quarto:</label>
+                    <input type="text" id="numero-quarto" name="numero-quarto" required>
+                </div>
+                <div class="form-group">
+                    <label for="tipo-quarto">Tipo do Quarto:</label>
+                    <input type="text" id="tipo-quarto" name="tipo-quarto" required>
+                </div>
+                <div class="form-group">
+                    <label for="status-quarto">Status:</label>
+                    <select id="status-quarto" name="status-quarto" required>
+                        <option value="disponivel">Disponível</option>
+                        <option value="ocupado">Ocupado</option>
+                        <option value="manutencao">Manutenção</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="preco-quarto">Preço:</label>
+                    <input type="number" id="preco-quarto" name="preco-quarto" required>
+                </div>
+                <button type="submit">Salvar Quarto</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/quartos.js"></script>
+</body>
+</html>
